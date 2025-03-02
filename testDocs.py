@@ -52,9 +52,6 @@ class Logger:
                     writer.writerow(self.__step_result)
                 self.__step_result = dict()
             elif 'testcase' in func.__doc__:
-                # for step in self.case_result:
-                #     # step.update(func(*args, **kwargs))
-                #     print(step)
                 self.__case_result['test_case'] = result['testcase']
             elif 'teststep' in func.__doc__:
                 self.__step_result['test_step'] = result['test_step']
