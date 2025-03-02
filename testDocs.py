@@ -40,8 +40,8 @@ class Logger:
         def wrapper(*args, **kwargs):
             result = func(*args, **kwargs)
             if 'action' in func.__name__:
-                self.__step_result.update(result)
-                self.__step_result.update(kwargs)
+                self.__case_result.update(result)
+                self.__case_result.update(kwargs)
             elif 'check' in func.__name__:
                 self.__step_result.update(result)
                 self.__step_result.update(kwargs)
@@ -54,7 +54,7 @@ class Logger:
             elif 'testcase' in func.__doc__:
                 self.__case_result['test_case'] = result['testcase']
             elif 'teststep' in func.__doc__:
-                self.__step_result['test_step'] = result['test_step']
+                self.__case_result['test_step'] = result['test_step']
             else:
                 self.__step_result.update(result)
                 self.__step_result.update(kwargs)
