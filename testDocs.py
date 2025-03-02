@@ -1,5 +1,4 @@
 import csv
-import datetime
 
 
 class Logger:

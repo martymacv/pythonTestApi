@@ -1,0 +1,3 @@
+test_case;test_step;action;params;check_desc;check_result;expected;actual;exc_info
+Тестирование модуля Store;Получение запасов питомцев по статусам;https://petstore.swagger.io/v2/store/inventory;;Проверка статус кода;True;200;200;
+Тестирование модуля Store;;;;Проверка полноты статусов питомцев;True;1;11;

@@ -1,9 +1,10 @@
 import os
+import datetime
 
 from apiLib import *
 
 
-logger.report_name = f"reports/report_{os.path.basename(__file__)}_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}"
+logger.report_name = f"reports/report_{os.path.basename(__file__).split('.')[0]}_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}"
 
 with Store(base_url="https://petstore.swagger.io/v2") as test_case:
     test_case(name="Тестирование модуля Store")
